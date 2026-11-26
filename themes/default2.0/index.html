@@ -113,6 +113,7 @@
 					<div id="main" class="wrapper">
 						<div id="primary" class="site-content">
 							<div id="content" role="main">
+								<div class="cfblog-search-wrap">{{ &searchBoxHtml }}</div>
 								{{ #articleList.length }}
 								{{ #articleList }}
 									<article id="post-{{&id}}" class="post-{{&id}} post type-post status-publish format-standard has-post-thumbnail hentry category-4">
@@ -122,10 +123,12 @@
 										</header>
 										<!-- .entry-header -->
 										<div class="entry-summary">
+											{{ #img }}
 											<div class="excerpt-thumb">
 												<a href="/article/{{&id}}/{{&link}}.html" title="{{ &title }}" rel="bookmark">
 													<img width="200" height="112" src="{{ &img }}" class="alignleft wp-post-image" alt="" loading="lazy" /></a>
 											</div>
+											{{ /img }}
 											<p>{{ &contentText }} ...
 												<span class="read-more">
 													<a href="/article/{{&id}}/{{&link}}.html">继续阅读 &raquo;</a></span>
